@@ -18,7 +18,19 @@
 <h3>問題</h3>
 <p>Q1.What is zmqRemoteAPI, and how does it relate to CoppeliaSim?</p>
 <p>A1. zmqRemoteAPI 是 CoppeliaSim 模擬器中用於通訊的一種 API。它使用 ZeroMQ 進行通訊，可用於遠程控制 CoppeliaSim 模擬器，從而實現與其它應用程序的互動。使用 zmqRemoteAPI，可以從自己的程序中發送指令給 CoppeliaSim，例如控制模型運動或獲取模擬器中的數據。可以使用幾乎任何程式語言來編寫與 CoppeliaSim 進行通訊的程序，只要該語言支持 ZeroMQ 協議即可。在 CoppeliaSim 中，zmqRemoteAPI 是一個非常有用的工具，它可以幫助用戶將模擬器與其它應用程序進行無縫集成，從而實現更加複雜的模擬和控制任務。</p>
-<h3>亂數</h3>
+<p></p>
+<p>Q2.How do you establish a connection between a Python script and CoppeliaSim using zmqRemoteAPI?</p>
+<p>A2.1.確保已經安裝了 Python 和 ZeroMQ 庫。可以使用 pip 工具安裝 ZeroMQ：pip install pyzmq</p>
+<p>     2.在 CoppeliaSim 中開啟一個場景，並在場景中添加一個 Remote API Server 對象。可以在CoppeliaSim 中通過點擊菜單 "Add" &gt; "Remote API Server" 來添加該對象。</p>
+<p>     3.在 Python 腳本中使用 pyzmq 庫建立與 CoppeliaSim 的 ZeroMQ 連接。</p>
+<p>     4.通過 ZeroMQ socket 對象向 CoppeliaSim 發送命令。可以使用 coppeliaSim 模塊提供的函數封裝命令。</p>
+<p></p>
+<p>Q3.What are some common use cases for zmqRemoteAPI in CoppeliaSim?</p>
+<p>A3.1.機器人模擬：使用 CoppeliaSim 中的機器人模型，並通過 zmqRemoteAPI 來控制機器人的運動和感測。可以編寫 Python 程序來控制機器人，並使用 zmqRemoteAPI 將命令發送到CoppeliaSim，從而控制機器人的運動。</p>
+<p>     2.自主車輛開發：使用 CoppeliaSim 中的自主車輛模型，並通過 zmqRemoteAPI 來測試和調試自主車輛的算法和控制器。可以編寫 Python 程序來控制自主車輛，並使用 zmqRemoteAPI 將命令發送到 CoppeliaSim，從而控制自主車輛的運動和感測。</p>
+<p>     3.機器人視覺：使用 CoppeliaSim 中的相機模型和圖像處理工具箱，並通過 zmqRemoteAPI 將圖像數據發送到 Python 程序進行進一步的處理和分析。可以編寫 Python 程序來分析圖像數據，並使用zmqRemoteAPI 從 CoppeliaSim 中獲取圖像數據。</p>
+<p>     4.機器人控制器測試：使用 CoppeliaSim 中的模型和物理引擎，並通過 zmqRemoteAPI 將測試用例發送到 CoppeliaSim，以測試控制器的性能和穩定性。可以編寫 Python 程序來生成測試用例，並使用zmqRemoteAPI 將其發送到 CoppeliaSim。</p>
+<p></p><h3>亂數</h3>
 <p>隨機排列組別網站</p>
 <p><button id="亂數 ">亂數</button></p>
 <!-- 導入 brython 程式庫 -->
