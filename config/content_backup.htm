@@ -18,6 +18,9 @@
 <h3>問題</h3>
 <p>Q1.What is zmqRemoteAPI, and how does it relate to CoppeliaSim?</p>
 <p>A1. zmqRemoteAPI 是 CoppeliaSim 模擬器中用於通訊的一種 API。它使用 ZeroMQ 進行通訊，可用於遠程控制 CoppeliaSim 模擬器，從而實現與其它應用程序的互動。使用 zmqRemoteAPI，可以從自己的程序中發送指令給 CoppeliaSim，例如控制模型運動或獲取模擬器中的數據。可以使用幾乎任何程式語言來編寫與 CoppeliaSim 進行通訊的程序，只要該語言支持 ZeroMQ 協議即可。在 CoppeliaSim 中，zmqRemoteAPI 是一個非常有用的工具，它可以幫助用戶將模擬器與其它應用程序進行無縫集成，從而實現更加複雜的模擬和控制任務。</p>
+<p></p>
+<p>Q2.How do you establish a connection between a Python script and CoppeliaSim using zmqRemoteAPI?</p>
+<p>A2.1.確保已經安裝了 Python 和 ZeroMQ 庫。可以使用 pip 工具安裝 ZeroMQ：pip install pyzmq<br/>     2.在 CoppeliaSim 中開啟一個場景，並在場景中添加一個 Remote API Server 對象。可以在                CoppeliaSim 中通過點擊菜單 "Add" &gt; "Remote API Server" 來添加該對象。<br/>     3.在 Python 腳本中使用 pyzmq 庫建立與 CoppeliaSim 的 ZeroMQ 連接。<br/>     4.通過 ZeroMQ socket 對象向 CoppeliaSim 發送命令。可以使用 coppeliaSim 模塊提供的函數封        裝命令。<br/>     </p>
 <h3>亂數</h3>
 <p>隨機排列組別網站</p>
 <p><button id="亂數 ">亂數</button></p>
